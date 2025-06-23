@@ -1,57 +1,293 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane fx:id="homeAnchorpane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.studentmanagementsystem.controller.HomePageController">
+<AnchorPane fx:id="homeAnchorpane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.studentmanagementsystem.controller.HomePageController">
    <children>
-      <Pane prefHeight="700.0" prefWidth="218.0" style="-fx-background-color: #8c7ae6;">
+      <!-- Sidebar with modern gradient -->
+      <Pane prefHeight="700.0" prefWidth="280.0" style="-fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);">
+         <effect>
+            <DropShadow color="#00000033" offsetX="2.0" offsetY="2.0" radius="15.0" />
+         </effect>
          <children>
-            <Button fx:id="btnStudent" layoutX="46.0" layoutY="94.0" mnemonicParsing="false" onAction="#studentOnAction" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Student">
+
+            <!-- Navigation Separator -->
+            <Separator layoutX="30.0" layoutY="150.0" prefWidth="220.0" style="-fx-background-color: #ffffff33;" />
+
+            <!-- Navigation Buttons -->
+            <VBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="180.0" prefWidth="220.0" spacing="12.0">
+               <children>
+                  <Button fx:id="btnStudent" mnemonicParsing="false" onAction="#studentOnAction" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="👨‍🎓 Students">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000011" offsetY="1.0" radius="3.0" />
+                     </effect>
+                  </Button>
+
+                  <Button fx:id="btnCOURSE" mnemonicParsing="false" onAction="#courseOnAction" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="📚 Courses">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000011" offsetY="1.0" radius="3.0" />
+                     </effect>
+                  </Button>
+
+                  <Button fx:id="btnLec" mnemonicParsing="false" onAction="#lectuersOnAction" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="👨‍🏫 Lecturers">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000011" offsetY="1.0" radius="3.0" />
+                     </effect>
+                  </Button>
+
+                  <Button fx:id="btnAttendance" mnemonicParsing="false" onAction="#attendanceOnAction" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="✅ Attendance">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000011" offsetY="1.0" radius="3.0" />
+                     </effect>
+                  </Button>
+
+                  <Button fx:id="btnPayment" mnemonicParsing="false" onAction="#paymentOnActition" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="💳 Payments">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000011" offsetY="1.0" radius="3.0" />
+                     </effect>
+                  </Button>
+
+                  <Button fx:id="btnSalary" mnemonicParsing="false" onAction="#salaryOnAction" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="💰 Salary">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000011" offsetY="1.0" radius="3.0" />
+                     </effect>
+                  </Button>
+
+                  <Button fx:id="btnDepartment" mnemonicParsing="false" onAction="#departmentOnAction" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="🏢 Departments">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000011" offsetY="1.0" radius="3.0" />
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+
+            <!-- Logout Button at Bottom -->
+            <Button fx:id="btnLogOut" layoutX="30.0" layoutY="630.0" mnemonicParsing="false" onAction="#btnLogOutOnActoin" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #ff6b6b; -fx-background-radius: 12; -fx-border-radius: 12; -fx-text-fill: white; -fx-cursor: hand;" text="🚪 Log Out">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
+               <effect>
+                  <DropShadow color="#00000022" offsetY="2.0" radius="6.0" />
+               </effect>
             </Button>
-            <Button fx:id="btnCOURSE" layoutX="46.0" layoutY="168.0" mnemonicParsing="false" onAction="#courseOnAction" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Course">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnAttendance" layoutX="46.0" layoutY="318.0" mnemonicParsing="false" onAction="#attendanceOnAction" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Attendance">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnPayment" layoutX="46.0" layoutY="393.0" mnemonicParsing="false" onAction="#paymentOnActition" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Payment">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnSalary" layoutX="46.0" layoutY="468.0" mnemonicParsing="false" onAction="#salaryOnAction" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Salary">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnDepartment" layoutX="45.0" layoutY="542.0" mnemonicParsing="false" onAction="#departmentOnAction" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Department">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnLec" layoutX="46.0" layoutY="243.0" mnemonicParsing="false" onAction="#lectuersOnAction" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="Lectuers">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnLogOut" layoutX="45.0" layoutY="616.0" mnemonicParsing="false" onAction="#btnLogOutOnActoin" prefHeight="37.0" prefWidth="128.0" style="-fx-background-radius: 20;" text="logOut">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
+            <!-- Header Section -->
+            <VBox alignment="CENTER" layoutX="15.0" layoutY="18.0" prefWidth="240.0" spacing="10.0">
+               <children>
+                  <!-- Logo/Icon Circle -->
+                  <Circle fill="#ffffff" radius="35.0" stroke="#ffffff" strokeType="INSIDE" strokeWidth="2.0">
+                     <effect>
+                        <DropShadow color="#00000022" offsetY="2.0" radius="8.0" />
+                     </effect>
+                  </Circle>
+
+                  <!-- System Title -->
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#e8e9ff" strokeType="OUTSIDE" strokeWidth="0.0" text="System" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
          </children>
       </Pane>
-      <AnchorPane fx:id="loadingAnchorpane" layoutX="219.0" prefHeight="700.0" prefWidth="681.0" />
+
+      <!-- Main Content Area -->
+      <AnchorPane fx:id="loadingAnchorpane" layoutX="280.0" prefHeight="700.0" prefWidth="681.0" style="-fx-background-color: #f8fafc;">
+         <children>
+            <!-- Welcome Header -->
+            <VBox alignment="CENTER" layoutX="50.0" layoutY="50.0" prefWidth="520.0" spacing="20.0">
+               <children>
+                  <Text fill="#2d3748" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Student Management System" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#718096" strokeType="OUTSIDE" strokeWidth="0.0" text="Select an option from the sidebar to get started" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+
+            <!-- Dashboard Cards -->
+            <HBox alignment="CENTER" layoutX="50.0" layoutY="200.0" prefWidth="520.0" spacing="20.0">
+               <children>
+                  <!-- Quick Stats Card 1 -->
+                  <VBox alignment="CENTER" prefHeight="120.0" prefWidth="160.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;">
+                     <effect>
+                        <DropShadow color="#00000008" offsetY="4.0" radius="12.0" />
+                     </effect>
+                     <children>
+                        <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" text="👨‍🎓">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2d3748" strokeType="OUTSIDE" strokeWidth="0.0" text="Students">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Quick Stats Card 2 -->
+                  <VBox alignment="CENTER" prefHeight="120.0" prefWidth="160.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;">
+                     <effect>
+                        <DropShadow color="#00000008" offsetY="4.0" radius="12.0" />
+                     </effect>
+                     <children>
+                        <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" text="📚">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2d3748" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Quick Stats Card 3 -->
+                  <VBox alignment="CENTER" prefHeight="120.0" prefWidth="160.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;">
+                     <effect>
+                        <DropShadow color="#00000008" offsetY="4.0" radius="12.0" />
+                     </effect>
+                     <children>
+                        <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" text="👨‍🏫">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#2d3748" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecturers">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <!-- Feature Highlights -->
+            <VBox alignment="CENTER_LEFT" layoutX="81.0" layoutY="378.0" prefWidth="520.0" spacing="15.0">
+               <children>
+                  <Text fill="#2d3748" strokeType="OUTSIDE" strokeWidth="0.0" text="System Features">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" text="✨">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#4a5568" strokeType="OUTSIDE" strokeWidth="0.0" text="Comprehensive student information management">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" text="✨">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#4a5568" strokeType="OUTSIDE" strokeWidth="0.0" text="Course scheduling and management">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" text="✨">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#4a5568" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendance tracking and reporting">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" text="✨">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#4a5568" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment and salary management">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
