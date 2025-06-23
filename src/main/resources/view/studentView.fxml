@@ -8,80 +8,71 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
+<AnchorPane fx:id="studentAnchorpane" prefHeight="700.0" prefWidth="681.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.studentmanagementsystem.controller.StudentController">
 
-<AnchorPane fx:id="studentAnchorpane" prefHeight="700.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.studentmanagementsystem.controller.StudentController">
-   <children>
-      <Label layoutX="265.0" layoutY="28.0" text="Student Form">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtId" layoutX="56.0" layoutY="145.0" prefHeight="36.0" prefWidth="243.0" promptText="S001" />
-      <TextField fx:id="txtName" layoutX="326.0" layoutY="145.0" prefHeight="36.0" prefWidth="260.0" promptText="name" />
-      <TextField fx:id="txtAge" layoutX="330.0" layoutY="327.0" prefHeight="36.0" prefWidth="135.0" promptText="00" />
-      <TextField fx:id="txtAddress" layoutX="56.0" layoutY="230.0" prefHeight="36.0" prefWidth="533.0" promptText="address" />
-      <TextField fx:id="txtContact" layoutX="56.0" layoutY="419.0" prefHeight="36.0" prefWidth="260.0" promptText="000000000000" />
-      <Label layoutX="56.0" layoutY="118.0" text="StudentId">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="341.0" layoutY="118.0" text="Student Name">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="330.0" layoutY="290.0" text="Student Age">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="61.0" layoutY="200.0" text="Student Address">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="56.0" layoutY="288.0" text="Student BirthDay">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <DatePicker fx:id="txtDate" layoutX="56.0" layoutY="326.0" prefHeight="36.0" prefWidth="236.0" promptText="--/--/----" />
-      <Label layoutX="56.0" layoutY="385.0" text="Student Contact Number">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnSave" layoutX="331.0" layoutY="414.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="36.0" prefWidth="78.0" text="Save">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnUpdate" layoutX="416.0" layoutY="414.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="36.0" prefWidth="67.0" text="update">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnDelete" layoutX="491.0" layoutY="414.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="36.0" prefWidth="67.0" text="delete">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnClear" layoutX="564.0" layoutY="414.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="36.0" prefWidth="67.0" text="clear">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <TableView fx:id="tblStudent" layoutX="27.0" layoutY="473.0" prefHeight="200.0" prefWidth="628.0">
-         <columns>
-            <TableColumn fx:id="clmId" prefWidth="75.0" text="Id" />
-            <TableColumn fx:id="clmName" prefWidth="130.0" text="Name" />
-            <TableColumn fx:id="clmAge" prefWidth="44.0" text="age" />
-            <TableColumn fx:id="clmBirthDay" prefWidth="122.0" text="birth Day" />
-            <TableColumn fx:id="cclmAddress" prefWidth="164.0" text="address" />
-            <TableColumn fx:id="clmPhone" prefWidth="92.0" text="phone" />
-         </columns>
-      </TableView>
-   </children>
+   <!-- Title -->
+   <Text fill="#2d3748" layoutX="30.0" layoutY="50.0" text="👨‍🎓 Student Management">
+      <font><Font name="System Bold" size="28.0" /></font>
+   </Text>
+
+   <!-- Subtitle -->
+   <Text fill="#718096" layoutX="30.0" layoutY="75.0" text="Add, edit, and manage student information">
+      <font><Font size="14.0" /></font>
+   </Text>
+
+   <!-- ID -->
+   <Label layoutX="30.0" layoutY="100.0" text="🆔 Student ID" textFill="#4a5568">
+      <font><Font name="System Bold" size="14.0" /></font>
+   </Label>
+   <TextField fx:id="txtId" layoutX="30.0" layoutY="120.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter student ID (e.g., S001)" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+   <!-- Name -->
+   <Label layoutX="370.0" layoutY="100.0" text="👤 Student Name" textFill="#4a5568">
+      <font><Font name="System Bold" size="14.0" /></font>
+   </Label>
+   <TextField fx:id="txtName" layoutX="370.0" layoutY="120.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter full name" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+   <!-- Address -->
+   <Label layoutX="30.0" layoutY="180.0" text="🏠 Student Address" textFill="#4a5568">
+      <font><Font name="System Bold" size="14.0" /></font>
+   </Label>
+   <TextField fx:id="txtAddress" layoutX="30.0" layoutY="200.0" prefHeight="35.0" prefWidth="620.0" promptText="Enter complete address" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+   <!-- Birth Date -->
+   <Label layoutX="30.0" layoutY="260.0" text="🎂 Birth Date" textFill="#4a5568">
+      <font><Font name="System Bold" size="14.0" /></font>
+   </Label>
+   <DatePicker fx:id="txtDate" layoutX="30.0" layoutY="280.0" prefHeight="35.0" prefWidth="280.0" promptText="Select birth date" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+   <!-- Age -->
+   <Label layoutX="370.0" layoutY="260.0" text="🔢 Age" textFill="#4a5568">
+      <font><Font name="System Bold" size="14.0" /></font>
+   </Label>
+   <TextField fx:id="txtAge" layoutX="370.0" layoutY="280.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter age" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+   <!-- Contact -->
+   <Label layoutX="30.0" layoutY="340.0" text="📞 Contact Number" textFill="#4a5568">
+      <font><Font name="System Bold" size="14.0" /></font>
+   </Label>
+   <TextField fx:id="txtContact" layoutX="30.0" layoutY="360.0" prefHeight="35.0" prefWidth="217.0" promptText="Enter phone number (e.g., +94 77 123 4567)" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+   <!-- Buttons -->
+   <Button fx:id="btnSave" layoutX="259.0" layoutY="360.0" onAction="#saveOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #48bb78; -fx-text-fill: white; -fx-background-radius: 10;" text="Save" />
+   <Button fx:id="btnUpdate" layoutX="360.0" layoutY="360.0" onAction="#updateOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #4299e1; -fx-text-fill: white; -fx-background-radius: 10;" text="Update" />
+   <Button fx:id="btnDelete" layoutX="461.0" layoutY="360.0" onAction="#deleteOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #f56565; -fx-text-fill: white; -fx-background-radius: 10;" text=" Delete" />
+   <Button fx:id="btnClear" layoutX="563.0" layoutY="360.0" onAction="#clearOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #a0aec0; -fx-text-fill: white; -fx-background-radius: 10;" text="Clear" />
+
+   <!-- Table -->
+   <TableView fx:id="tblStudent" layoutX="11.0" layoutY="433.0" prefHeight="240.0" prefWidth="655.0" style="-fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 10;">
+      <columns>
+         <TableColumn fx:id="clmId" prefWidth="80.0" text=" ID" />
+         <TableColumn fx:id="clmName" prefWidth="140.0" text="Name" />
+         <TableColumn fx:id="clmAge" prefWidth="60.0" text=" Age" />
+         <TableColumn fx:id="clmBirthDay" prefWidth="105.0" text="Birth Date" />
+         <TableColumn fx:id="cclmAddress" prefWidth="166.0" text=" Address" />
+         <TableColumn fx:id="clmPhone" prefWidth="101.0" text="Phone" />
+      </columns>
+   </TableView>
 </AnchorPane>
