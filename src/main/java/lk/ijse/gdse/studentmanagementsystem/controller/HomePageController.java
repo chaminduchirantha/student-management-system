@@ -3,11 +3,14 @@ package lk.ijse.gdse.studentmanagementsystem.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.util.Optional;
 
 public class HomePageController {
 
@@ -48,12 +51,25 @@ public class HomePageController {
     }
 
     @FXML
-    void btnLogOutOnActoin(ActionEvent event) {
+    void btnLogOutOnActoin(ActionEvent event) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to Log out this Programme?", ButtonType.YES, ButtonType.NO);
+        Optional<ButtonType> optionalButtonType = alert.showAndWait();
 
+        if (optionalButtonType.isPresent() && optionalButtonType.get() == ButtonType.YES) {
+            boolean isDeleted = true;
+            if (isDeleted) {
+                homeAnchorpane.getChildren().clear();
+                AnchorPane load = FXMLLoader.load(getClass().getResource("/View/loginView.fxml"));
+                homeAnchorpane.getChildren().add(load);
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Log out not Programme").show();
+            }
+        }
     }
 
     @FXML
     void courseOnAction(ActionEvent event) {
+        navigateTo("/view/courseView.fxml");
 
     }
 
