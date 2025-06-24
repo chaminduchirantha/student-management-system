@@ -80,6 +80,7 @@ public class HomePageController {
 
     @FXML
     void lectuersOnAction(ActionEvent event) {
+        navigateTo("/view/lectuersView.fxml");
 
     }
 
