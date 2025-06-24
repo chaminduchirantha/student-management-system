@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -27,9 +28,12 @@
       </ImageView>
 
       <!-- Login Glass Pane -->
-      <Pane layoutX="83.0" layoutY="150.0" prefHeight="360.0" prefWidth="400.0" style="-fx-background-color: rgba(255,255,255,0.6); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #48bb78;">
+      <Pane layoutX="83.0" layoutY="150.0" prefHeight="360.0" prefWidth="400.0" style="-fx-background-color: rgba(255,255,255,0.6); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);">
          <effect>
-            <DropShadow color="#00000022" radius="20.0" />
+            <DropShadow height="41.0" radius="20.0" width="41.0">
+               <color>
+                  <Color opacity="0.13333334028720856" />
+               </color></DropShadow>
          </effect>
          <children>
             <!-- Title -->
@@ -46,7 +50,7 @@
             <PasswordField fx:id="txtPassword" layoutX="44.0" layoutY="150.0" prefHeight="40.0" prefWidth="310.0" promptText="🔒 Password" style="-fx-background-radius: 10; -fx-border-radius: 20; -fx-border-color: #e2e8f0; -fx-background-color: #f7fafc;" />
 
             <!-- Login Button -->
-            <Button fx:id="btnLogin" layoutX="140.0" layoutY="220.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #48bb78; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12;" text="Login">
+            <Button fx:id="btnLogin" layoutX="140.0" layoutY="220.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12;" text="Login">
                <font>
                   <Font name="Segoe UI Semibold" size="16.0" />
                </font>
@@ -57,7 +61,7 @@
          </children>
       </Pane>
       <Line endX="-66.0" endY="432.0" layoutX="568.0" layoutY="106.0" startX="-66.0" startY="-7.0" />
-      <Label prefHeight="69.0" prefWidth="1000.0" style="-fx-background-color: #48bb78;" text="                                   Student Management System" textFill="#fffefe">
+      <Label prefHeight="69.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);" text="                                   Student Management System" textFill="#fffefe">
          <font>
             <Font size="32.0" />
          </font>
