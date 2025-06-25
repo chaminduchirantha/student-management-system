@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="courseAnchorpane" prefHeight="700.0" prefWidth="681.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.studentmanagementsystem.controller.CourseController">
+
+    <!-- Title -->
+    <Text fill="#2d3748" layoutX="30.0" layoutY="50.0" text="👨‍🎓 Coursers Management">
+        <font><Font name="System Bold" size="28.0" /></font>
+    </Text>
+
+    <!-- Subtitle -->
+    <Text fill="#718096" layoutX="30.0" layoutY="75.0" text="Add, edit, and manage Course information">
+        <font><Font size="14.0" /></font>
+    </Text>
+
+    <!-- ID -->
+    <Label layoutX="30.0" layoutY="100.0" text=" Course ID" textFill="#4a5568">
+        <font><Font name="System Bold" size="14.0" /></font>
+    </Label>
+    <TextField fx:id="txtCourseId" layoutX="30.0" layoutY="120.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter Course ID (e.g., C001)" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+    <!-- Name -->
+    <Label layoutX="370.0" layoutY="100.0" text="Course Name" textFill="#4a5568">
+        <font><Font name="System Bold" size="14.0" /></font>
+    </Label>
+    <TextField fx:id="txtCourseName" layoutX="370.0" layoutY="120.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter full name" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+    <!-- Address -->
+    <Label layoutX="30.0" layoutY="180.0" text="Course Duration" textFill="#4a5568">
+        <font><Font name="System Bold" size="14.0" /></font>
+    </Label>
+    <TextField fx:id="txtDuration" layoutX="30.0" layoutY="200.0" prefHeight="35.0" prefWidth="620.0" promptText="Enter Duration" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+    <!-- Birth Date -->
+    <Label layoutX="30.0" layoutY="260.0" text="Course Payment" textFill="#4a5568">
+        <font><Font name="System Bold" size="14.0" /></font>
+    </Label>
+    <TextField fx:id="txtPayment" layoutX="370.0" layoutY="280.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter Payement" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+    <!-- Age -->
+    <Label layoutX="370.0" layoutY="260.0" text="Student ID" textFill="#4a5568">
+        <font><Font name="System Bold" size="14.0" /></font>
+    </Label>
+    <TextField fx:id="txtId" layoutX="370.0" layoutY="280.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter Student ID" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+
+
+    <!-- Buttons -->
+    <Button fx:id="btnSave" layoutX="259.0" layoutY="360.0" onAction="#saveOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #48bb78; -fx-text-fill: white; -fx-background-radius: 10;" text="Save" />
+    <Button fx:id="btnUpdate" layoutX="360.0" layoutY="360.0" onAction="#updateOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #4299e1; -fx-text-fill: white; -fx-background-radius: 10;" text="Update" />
+    <Button fx:id="btnDelete" layoutX="461.0" layoutY="360.0" onAction="#deleteOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #f56565; -fx-text-fill: white; -fx-background-radius: 10;" text=" Delete" />
+    <Button fx:id="btnClear" layoutX="563.0" layoutY="360.0" onAction="#clearOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #a0aec0; -fx-text-fill: white; -fx-background-radius: 10;" text="Clear" />
+
+    <!-- Table -->
+    <TableView fx:id="tblCourse" layoutX="11.0" layoutY="433.0" prefHeight="240.0" prefWidth="655.0" style="-fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 10;">
+        <columns>
+            <TableColumn fx:id="clmCourseId" prefWidth="95.99997234344482" text=" Course Id" />
+            <TableColumn fx:id="clmName" prefWidth="201.6000213623047" text="Course Name" />
+            <TableColumn fx:id="clmDuration" prefWidth="102.39996337890625" text=" Course Duration" />
+            <TableColumn fx:id="clmPayment" prefWidth="140.79998779296875" text="Course Payment" />
+            <TableColumn fx:id="clmStudentID" prefWidth="111.20001220703125" text=" Student ID" />
+        </columns>
+    </TableView>
+   <TextField fx:id="txtId1" layoutX="31.0" layoutY="280.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter Payment" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+</AnchorPane>
