@@ -28,7 +28,7 @@ public class CourseModel {
 
     public boolean updateCourse(CourseDto courseDto) throws SQLException, ClassNotFoundException {
         Connection connection = DbConnection.getInstance().getConnection();
-        String sql = "UPDATE course SET course_name = ?, course_payment = ?, student_birth_day = ?, course_diuration = ?, student_id = ? WHERE course_id = ?";
+        String sql = "UPDATE course SET course_name = ?, course_payment = ?, course_diuration = ?, student_id = ? WHERE course_id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, courseDto.getCourseName());
         preparedStatement.setString(2,courseDto.getCoursePrice());
