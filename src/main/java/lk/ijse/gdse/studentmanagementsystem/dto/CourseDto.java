@@ -11,7 +11,7 @@ import lombok.*;
 public class CourseDto {
     private String courseId;
     private String courseName;
-    private double coursePrice;
+    private String coursePrice;
     private String courseDuration;
     private String studentId;
 
