@@ -59,7 +59,7 @@
     <Button fx:id="btnClear" layoutX="563.0" layoutY="360.0" onAction="#clearOnAction" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #a0aec0; -fx-text-fill: white; -fx-background-radius: 10;" text="Clear" />
 
     <!-- Table -->
-    <TableView fx:id="tblCourse" layoutX="11.0" layoutY="433.0" prefHeight="240.0" prefWidth="655.0" style="-fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 10;">
+    <TableView fx:id="tblCourse" layoutX="11.0" layoutY="433.0" onMouseClicked="#tblOnClick" prefHeight="240.0" prefWidth="655.0" style="-fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 10;">
         <columns>
             <TableColumn fx:id="clmCourseId" prefWidth="95.99997234344482" text=" Course Id" />
             <TableColumn fx:id="clmName" prefWidth="201.6000213623047" text="Course Name" />
