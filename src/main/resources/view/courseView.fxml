@@ -68,5 +68,5 @@
             <TableColumn fx:id="clmStudentID" prefWidth="111.20001220703125" text=" Student ID" />
         </columns>
     </TableView>
-   <TextField fx:id="txtId1" layoutX="31.0" layoutY="280.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter Payment" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
+   <TextField fx:id="txtPayment" layoutX="31.0" layoutY="280.0" prefHeight="35.0" prefWidth="280.0" promptText="Enter Payment" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8;" />
 </AnchorPane>
